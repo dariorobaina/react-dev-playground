@@ -24,15 +24,39 @@
     aside {
         .tw-follow-card-followButton {
             background-color: white;
-            border: 0;
+            border: 1px solid white;
             border-radius: 20px;
             padding: 5px 10px;
             font-weight: bold;
             cursor: pointer;
+            transition: .3s ease background-color;
+            width: 100px;
+
+            &.is-following {
+                background-color: #222;
+                color: white;
+
+                &:hover {
+                    background-color: rgba(255, 0, 0, 0.274);
+                    border: 1px solid red;
+                    color: red;
+
+                    .tw-follow-card-buttonText {
+                        display: none;
+                    }
+
+                    .tw-follow-card-stopFollow {
+                        display: block;
+                    }
+                }
+            }
 
             &:hover {
-                background-color: #89f;
-                transition: .3s background-color;
+                opacity: .8;
+            }
+
+            .tw-follow-card-stopFollow {
+                display: none;
             }
         }
     }
