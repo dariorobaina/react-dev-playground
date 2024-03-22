@@ -28,7 +28,7 @@ export function App () {
                     <TwitterFollowCard
                         user = {element.username}
                         isFollowing = {element.isFollowing}
-                        key={element.username}
+                        key={element.username + element.name}
                     >
                         {element.name}
                     </TwitterFollowCard>
